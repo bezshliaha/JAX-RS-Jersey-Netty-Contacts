@@ -1,0 +1,76 @@
+
+REST API Contact
+---------------
+
+Отримання всіх даних
+GET
+http://localhost:8081/api/v1/contacts
+
+
+Створення даних
+POST
+http://localhost:8081/api/v1/contacts
+
+Виконуємо окремі запити.
+Налаштування в Postman: Body, raw, JSON.
+
+{
+    "name": "John",
+    "phone": "555 123-2344"
+}
+
+{
+    "name": "Bob",
+    "phone": "555 234-6543"
+}
+
+{
+    "name": "Alice",
+    "phone": "666 789-0987"
+}
+
+{
+    "name": "Tom",
+    "phone": "777 345-1234"
+}
+
+{
+    "name": "Lucy",
+    "phone": "777 345-3421"
+}
+
+{
+    "name": "David",
+    "phone": "555 786-4321"
+}
+
+Отримання даних за id
+GET
+http://localhost:8081/api/v1/contacts/2
+If id does not exist
+http://localhost:8081/api/v1/contacts/9
+
+
+Оновлення даних за id
+PUT
+http://localhost:8081/api/v1/contacts/2
+If id does not exist
+http://localhost:8081/api/v1/contacts/9
+
+Налаштування в Postman: Body, raw, JSON.
+
+
+{
+    "name": "Bob",
+    "phone": "777 555-2233"
+}
+
+Видалення даних за id
+DELETE
+http://localhost:8081/api/v1/contacts/5
+If id does not exist
+http://localhost:8081/api/v1/contacts/9
+
+
+ ДАЛІ REST-запити в
+ org.example.app.controller.ContactController
